@@ -29,7 +29,7 @@
           }"
           :to="lesson.path"
         >
-          <span class="text=gray-500">{{ index + 1 }}</span>
+          <span class="text=gray-500">{{ index + 1 }}.</span>
           <span>{{ lesson.title }}</span>
         </NuxtLink>
 
