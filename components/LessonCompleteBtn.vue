@@ -23,10 +23,12 @@
       default: false,
     },
   });
-  defineEmits(['update:modelValue']);
-  </script>
 
-  <style scoped>
+  defineEmits(['update:modelValue'])
+
+</script>
+
+<style scoped>
   ::selection {
     display: none;
   }
