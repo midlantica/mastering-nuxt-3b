@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex items-center justify-between w-full mb-12 prose">
+    <div class="flex items-center justify-between w-full mb-4">
       <h1 class="text-3xl">
         <span class="font-medium">
           <span class="font-bold">{{ title }}</span>
@@ -51,16 +51,10 @@
 <script setup>
   const { chapters, title } = useCourse()
 
-  /*   const resetError = async (error) => {
-      await navigateTo(
-        '/course/chapter/1-chapter-1/lesson/1-introduction-to-typescript-with-vue-js-3'
-      )
-      error.value = null
-    } */
-</script>
-
-<style scoped>
-  .router-link-active {
-    @apply bg-yellow-100;
+  const resetError = async (error) => {
+    await navigateTo(
+      '/course/chapter/1-chapter-1/lesson/1-introduction-to-typescript-with-vue-js-3'
+    )
+    error.value = null
   }
-</style>
+</script>

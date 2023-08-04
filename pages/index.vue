@@ -1,12 +1,9 @@
 <template>
-  <div class="prose">
-    <h1>Home page</h1>
-    <NuxtLink class="font-medium underline" :href="firstLesson.path">
-      Go to Next Lesson
-    </NuxtLink>
-  </div>
+  <NuxtLink class="font-medium underline" :href="firstLesson.path">
+    Go to first lesson
+  </NuxtLink>
 </template>
 
-<script setup>
+<script setup lang="ts">
   const firstLesson = useFirstLesson()
 </script>
