@@ -22,7 +22,8 @@
       return
     }
 
-    // Nuxt Supabase hack
+    // The Nuxt Supabase auth *should* be doing this
+    // for us, but it isn't for some reason.
     try {
       await $fetch('/api/_supabase/session', {
         method: 'POST',
@@ -36,6 +37,10 @@
     await navigateTo('/login')
   }
 
-  const name = computed(() => user.value?.user_metadata.full_name)
-  const profile = computed(() => user.value?.user_metadata.avatar_url)
+  const name = computed(
+    () => user.value?.user_metadata.full_name
+  )
+  const profile = computed(
+    () => user.value?.user_metadata.avatar_url
+  )
 </script>
